@@ -1,0 +1,65 @@
+1. Analisis Protocol Hierarchy
+
+Gambar: Protocol Hierarchy Statistics
+
+Hasil Analisis
+
+Berdasarkan tampilan Protocol Hierarchy, seluruh paket pada file capture didominasi oleh protokol TCP yang berjalan di atas IPv4 dan Ethernet. Terlihat sebanyak 37.841 paket (100%) termasuk dalam kategori TCP. Tidak ditemukan penggunaan protokol aplikasi lain yang signifikan seperti HTTP, DNS, maupun UDP.
+
+Dominasi penuh trafik TCP menunjukkan bahwa aktivitas yang terekam berfokus pada eksploitasi mekanisme komunikasi TCP. Temuan ini konsisten dengan karakteristik serangan TCP SYN Flood, di mana penyerang mengirimkan sejumlah besar paket SYN untuk memenuhi kapasitas koneksi pada server target.
+
+Kesimpulan
+
+Protocol Hierarchy menunjukkan bahwa serangan dilakukan menggunakan protokol TCP dan bukan melalui layanan lain seperti DNS atau UDP Amplification.
+
+2. Analisis Filter TCP SYN
+
+Gambar: Filter tcp.flags.syn==1 && tcp.flags.ack==0
+
+Hasil Analisis
+
+Hasil filtering menunjukkan seluruh paket yang ditampilkan memiliki flag [SYN] tanpa disertai flag ACK. Setiap paket memiliki panjang sekitar 60 byte dan dikirim menuju alamat tujuan 10.10.10.10 pada port 25565.
+
+Selain itu terlihat bahwa alamat sumber terus berubah pada setiap paket, sedangkan alamat tujuan tetap sama. Kondisi ini menunjukkan adanya sejumlah besar sumber yang mengirimkan permintaan pembentukan koneksi TCP ke satu target yang sama.
+
+Pada komunikasi TCP normal, paket SYN seharusnya diikuti oleh paket SYN-ACK dan ACK untuk membentuk koneksi yang valid. Namun pada capture ini hanya ditemukan paket SYN yang dikirim secara terus-menerus.
+
+Kesimpulan
+
+Pola paket yang hanya berisi flag SYN merupakan indikator kuat terjadinya serangan TCP SYN Flood yang bertujuan memenuhi tabel koneksi server dengan koneksi setengah terbuka (half-open connection).
+
+3. Analisis Conversations
+
+Gambar: Conversations IPv4/TCP
+
+Hasil Analisis
+
+Pada menu Conversations terlihat banyak pasangan komunikasi yang mengarah ke alamat tujuan yang sama yaitu 10.10.10.10:25565. Setiap alamat sumber hanya mengirimkan satu paket TCP SYN dengan ukuran 60 byte dan tidak menerima balasan dari server.
+
+Jumlah entri percakapan yang sangat besar menunjukkan adanya ribuan alamat sumber yang berpartisipasi dalam pengiriman trafik ke satu korban. Pola komunikasi many-to-one seperti ini merupakan karakteristik utama serangan Distributed Denial of Service (DDoS).
+
+Selain itu, tidak ditemukan adanya paket balasan dari sisi server yang menandakan bahwa proses three-way handshake tidak berhasil diselesaikan.
+
+Kesimpulan
+
+Analisis Conversations membuktikan bahwa serangan bersifat terdistribusi karena melibatkan banyak alamat sumber yang secara bersamaan menargetkan satu host tujuan.
+
+4. Analisis I/O Graph
+
+Gambar: I/O Graph
+
+Hasil Analisis
+
+Grafik I/O menunjukkan lonjakan trafik yang sangat tinggi pada awal periode capture. Pada detik pertama jumlah paket mencapai lebih dari 20.000 paket per detik, kemudian menurun secara signifikan pada detik-detik berikutnya.
+
+Pola ini menunjukkan adanya aktivitas burst traffic, yaitu pengiriman paket dalam jumlah besar dalam waktu yang sangat singkat. Karakteristik tersebut umum ditemukan pada serangan flooding yang bertujuan menghabiskan sumber daya server dalam waktu cepat.
+
+Lonjakan trafik yang terpusat pada awal capture juga menunjukkan bahwa serangan dilakukan secara agresif dan terkoordinasi untuk memaksimalkan dampak terhadap layanan target.
+
+Kesimpulan
+
+I/O Graph memperlihatkan adanya banjir paket TCP SYN menuju target yang menyebabkan peningkatan trafik secara drastis, sehingga mendukung identifikasi serangan DDoS SYN Flood.
+
+Kesimpulan Akhir Analisis
+
+Berdasarkan hasil analisis Protocol Hierarchy, TCP Flags, Conversations, dan I/O Graph, dapat disimpulkan bahwa file pkt.TCP.synflood.spoofed.pcap berisi serangan Distributed Denial of Service (DDoS) jenis TCP SYN Flood. Serangan dilakukan dengan mengirimkan paket SYN dalam jumlah sangat besar dari banyak alamat sumber menuju satu target yaitu 10.10.10.10 pada port 25565. Tidak ditemukannya proses three-way handshake yang lengkap menunjukkan adanya upaya menciptakan koneksi half-open untuk menghabiskan sumber daya server dan mengganggu ketersediaan layanan.
