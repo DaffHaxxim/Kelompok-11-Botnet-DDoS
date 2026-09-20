@@ -1,15 +1,15 @@
 # Laporan Analisis PCAP - DDoS TCP SYN Flood
 
-**Mata Kuliah:** Network Security (Praktik Keamanan Jaringan)
+**Mata Kuliah:** Keamanan Jaringan Komputer (A) / Network Security (Praktik Keamanan Jaringan)
 **Tugas:** PCAP Traffic Analysis Challenge with Wireshark - Week 3
-**Kelompok:** 1
+**Kelompok:** 11
 **Topik:** Botnet / DDoS
 
 | No | Nama | NRP |
 |----|------|-----|
-| 1  | _(isi)_ | _(isi)_ |
-| 2  | _(isi)_ | _(isi)_ |
-| 3  | _(isi)_ | _(isi)_ |
+| 1  | Sulthan Daffa Al Hasyimi | 5027251091 |
+| 2  | Muhammad Yusuf | 5027251067 |
+| 3  | Wildan Alfarezy | 5027251088 |
 
 ---
 

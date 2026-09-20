@@ -1,7 +1,7 @@
-# Kelompok 1 - Botnet & DDoS (TCP SYN Flood)
+# Kelompok 11 - Botnet & DDoS (TCP SYN Flood)
 
 Analisis PCAP untuk tugas **PCAP Traffic Analysis Challenge with Wireshark**
-Mata kuliah Network Security (Praktik Keamanan Jaringan) - Week 3
+Mata kuliah **Keamanan Jaringan Komputer (A)** / Network Security (Praktik Keamanan Jaringan) - Week 3
 Institut Teknologi Sepuluh Nopember (ITS)
 
 Topik kelompok: **Botnet / DDoS**
@@ -13,9 +13,9 @@ Jenis serangan yang dianalisis: **TCP SYN Flood (spoofed, terdistribusi)**
 
 | No | Nama | NRP |
 |----|------|-----|
-| 1  | _(isi)_ | _(isi)_ |
-| 2  | _(isi)_ | _(isi)_ |
-| 3  | _(isi)_ | _(isi)_ |
+| 1  | Sulthan Daffa Al Hasyimi | 5027251091 |
+| 2  | Muhammad Yusuf | 5027251067 |
+| 3  | Wildan Alfarezy | 5027251088 |
 
 ---
 
@@ -30,7 +30,7 @@ Klasifikasi serangan: **DDoS berbasis protokol (Layer 4) - state exhaustion**, b
 ## Struktur Repositori
 
 ```
-Kelompok-1-Botnet-DDoS/
+Kelompok-11-Botnet-DDoS/
 ├── README.md                       Deskripsi proyek (file ini)
 ├── data/
 │   ├── pkt.TCP.synflood.spoofed.pcap   File PCAP yang dianalisis
