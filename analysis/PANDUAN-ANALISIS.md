@@ -31,7 +31,7 @@ Kunci diagnosis: banyak SYN, tapi SYN-ACK = 0 dan ACK = 0. Trafik normal tidak p
 
 ---
 
-## Langkah 3 - Bukti yang Harus Diambil (screenshot ke folder ../screenshots/)
+## Langkah 3 - Bukti yang Diambil (screenshot ke folder ../screenshots/)
 
 1. **Protocol Hierarchy** - menunjukkan isi 100% TCP.
 2. **Conversations tab IPv4** (urut jumlah paket) - ribuan sumber -> `10.10.10.10`.
