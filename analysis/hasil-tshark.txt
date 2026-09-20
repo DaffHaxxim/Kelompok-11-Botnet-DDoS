@@ -1,0 +1,35 @@
+HASIL ANALISIS pkt.TCP.synflood.spoofed.pcap
+Dihasilkan dengan Wireshark/tshark 4.2.2. Angka ini bisa diverifikasi ulang.
+============================================================
+
+## capinfos (ringkasan)
+Number of packets:   37 k
+Capture duration:    23.683853 seconds
+Average packet size: 60.00 bytes
+
+## Total paket
+37841
+
+## Paket SYN saja (tcp.flags.syn==1 && tcp.flags.ack==0)
+37841
+## Paket SYN-ACK (tcp.flags.syn==1 && tcp.flags.ack==1)
+0
+
+## Jumlah IP sumber unik (bukti distribusi)
+37623
+## IP tujuan / korban (top 3)
+  37841 10.10.10.10
+## Port tujuan (top 3)
+  37841 25565
+
+## Paket per detik (interval 1 detik) - bukti burst
+|  0 <>  1 |  23620 | 1417200 |
+|  1 <>  2 |    675 |   40500 |
+|  2 <>  3 |      0 |       0 |
+|  3 <>  4 |  10193 |  611580 |
+|  4 <>  5 |   2551 |  153060 |
+|  5 <>  6 |      0 |       0 |
+|  6 <>  7 |      0 |       0 |
+|  7 <>  8 |      0 |       0 |
+|  8 <>  9 |      0 |       0 |
+|  9 <> 10 |      0 |       0 |

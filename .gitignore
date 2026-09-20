@@ -1,0 +1,16 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+.*.swp
+
+# Office / temp lock files
+~$*
+
+# Wireshark temp
+*.pcapng.tmp
+*.pcap.tmp
+
+# Catatan: file PCAP di data/ SENGAJA di-commit (ukuran ~2.9 MB, aman untuk GitHub).
+# Jangan tambahkan PCAP besar (>50 MB) tanpa Git LFS.
