@@ -38,9 +38,13 @@ Kelompok-11-Botnet-DDoS/
 ├── analysis/
 │   ├── PANDUAN-ANALISIS.md         Langkah + filter Wireshark + hasil yang diharapkan
 │   └── hasil-tshark.txt            Bukti angka hasil tshark (terverifikasi)
-├── screenshots/                    Simpan screenshot bukti di sini
+├── screenshots/                    Bukti visual hasil Wireshark
+│   ├── 01-protocol-hierarchy.jpg
+│   ├── 02-filter-syn.jpg
+│   ├── 03-conversations.jpg
+│   └── 04-io-graph.jpg
 └── report/
-    └── LAPORAN.md                  Template laporan untuk diisi kelompok
+    └── LAPORAN.md                  Laporan analisis lengkap (final)
 ```
 
 ---
@@ -65,10 +69,10 @@ Filter dan langkah lengkap ada di `analysis/PANDUAN-ANALISIS.md`.
 
 - [x] Pilih file PCAP
 - [x] Analisis awal (triage + tshark)
-- [ ] Isi identitas anggota
-- [ ] Ambil screenshot bukti
-- [ ] Tulis laporan (`report/LAPORAN.md`)
-- [ ] Push ke GitHub
+- [x] Isi identitas anggota
+- [x] Ambil screenshot bukti
+- [x] Tulis laporan (`report/LAPORAN.md`)
+- [x] Push ke GitHub
 
 ---
 

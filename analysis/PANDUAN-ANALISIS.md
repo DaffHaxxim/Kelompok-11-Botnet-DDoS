@@ -39,7 +39,7 @@ Kunci diagnosis: banyak SYN, tapi SYN-ACK = 0 dan ACK = 0. Trafik normal tidak p
 4. **Satu paket SYN**, panel detail dibuka pada bagian TCP Flags (SYN aktif).
 5. Hasil filter `tcp.flags.syn==1 && tcp.flags.ack==1` = 0 paket.
 
-Beri nama screenshot yang jelas, contoh: `01-protocol-hierarchy.png`, `02-conversations.png`, dst.
+Screenshot yang sudah diambil (folder `../screenshots/`): `01-protocol-hierarchy.jpg`, `02-filter-syn.jpg`, `03-conversations.jpg`, `04-io-graph.jpg`.
 
 ---
 

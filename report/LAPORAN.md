@@ -17,7 +17,7 @@
 
 Laporan ini menganalisis satu file PCAP untuk mengidentifikasi jenis serangan jaringan yang terekam di dalamnya. Analisis dilakukan menggunakan Wireshark dengan memeriksa komposisi protokol, flag TCP, pola percakapan, dan grafik trafik.
 
-- File yang dianalisis: `pkt.TCP.synflood.spoofed.pcap` (ukuran ~2,9 MB)
+- File yang dianalisis: `pkt.TCP.synflood.spoofed.pcap` (ukuran ~2,8 MB / 2.875.940 byte)
 - Sumber: repositori publik StopDDoS/packet-captures (detail di `data/SUMBER.md`)
 - Dugaan awal jenis serangan: DDoS TCP SYN Flood
 

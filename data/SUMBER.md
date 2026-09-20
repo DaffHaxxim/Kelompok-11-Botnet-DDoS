@@ -3,7 +3,7 @@
 | Atribut | Nilai |
 |---|---|
 | Nama file | `pkt.TCP.synflood.spoofed.pcap` |
-| Ukuran | ~2.9 MB |
+| Ukuran | ~2,8 MB (2.875.940 byte) |
 | Repositori sumber | StopDDoS/packet-captures |
 | URL | https://github.com/StopDDoS/packet-captures |
 | Lisensi | Bebas dipakai untuk membangun/menguji sistem proteksi DDoS. Atribusi tidak wajib tapi dihargai. |
